@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueSeaOS - Enterprise Router Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="left-sidebar">
+        <div class="logo">
+            <h2>BlueSeaOS</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active" data-view="overview">Overview</a>
+            <a href="#" data-view="devices">Devices Status</a>
+            <a href="#" data-view="network">Network Configuration</a>
+            <a href="#" data-view="firewall">Firewall & Security</a>
+            <a href="#" data-view="shell">BlueSea Shell</a>
+            <a href="#" data-view="services">Services</a>
+            <a href="#" data-view="settings">Settings</a>
+        </nav>
+    </div>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="search-box">
+                <input type="text" placeholder="Search router settings or status...">
+            </div>
+            <div class="user-profile">
+                <span>Administrator</span>
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <div class="hero-dashboard">
+            <div class="hero-side">
+                <div class="hero-item">
+                    <span>Active LAN Clients</span>
+                    <strong id="active-lan-clients">24</strong>
+                </div>
+                <div class="hero-item">
+                    <span>IP Pool Range</span>
+                    <strong>192.168.1.100 - 250</strong>
+                </div>
+            </div>
+
+            <div class="hero-center">
+                <div class="router-identity">
+                    <h2>BlueSea Enterprise Router</h2>
+                    <p>ID: BS-RT-9012-PRO</p>
+                </div>
+            </div>
+
+            <div class="hero-side">
+                <div class="hero-item">
+                    <span>DHCP Requests (24h)</span>
+                    <strong id="dhcp-requests-num">1,428</strong>
+                </div>
+                <div class="hero-item">
+                    <span>Router Uptime</span>
+                    <strong id="router-uptime">14d 6h 32m</strong>
+                </div>
+            </div>
+        </div>
+
+        <main class="content">
+            <div class="metrics-summary">
+                <div class="metric-card">
+                    <span>CPU Usage</span>
+                    <div class="metric-value" id="metric-cpu">14.2%</div>
+                </div>
+                <div class="metric-card">
+                    <span>Memory Usage</span>
+                    <div class="metric-value" id="metric-mem">42.8%</div>
+                </div>
+                <div class="metric-card">
+                    <span>WAN Throughput</span>
+                    <div class="metric-value" id="metric-wan">84.5 Mbps</div>
+                </div>
+                <div class="metric-card">
+                    <span>System Status</span>
+                    <div class="metric-value">
+                        <span class="status-badge">
+                            <span class="status-dot">
+                            </span>Operational
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Live System Performance (CPU & Memory)</h3>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-bars" id="performance-chart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>System Interfaces</h3>
+                    </div>
+                    <table class="status-table">
+                        <thead>
+                            <tr>
+                                <th>Interface</th>
+                                <th>Status</th>
+                                <th>Speed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>eth0 (WAN)</td>
+                                <td><span class="status-badge">
+                                    <span class="status-dot"></span>
+                                    Connected
+                                </span></td>
+                                <td>1000 Mbps</td>
+                            </tr>
+                            <tr>
+                                <td>br-lan (LAN)</td>
+                                <td><span class="status-badge">
+                                    <span class="status-dot">
+                                    </span>Active</span></td>
+                                <td>1000 Mbps</td>
+                            </tr>
+                            <tr>
+                                <td>wlan0 (Wi-Fi)</td>
+                                <td><span class="status-badge">
+                                    <span class="status-dot">
+                                    </span>Broadcasting</span></td>
+                                <td>867 Mbps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
