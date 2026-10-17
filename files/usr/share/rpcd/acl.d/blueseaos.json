@@ -5,7 +5,7 @@
             "ubus": {
                 "system": ["board", "info"],
                 "network.interface": ["dump", "status"],
-                "network.device": "status"
+                "network.device": ["status"]
             }
         }
     }
