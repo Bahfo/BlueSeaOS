@@ -1,0 +1,12 @@
+{
+    "blueseaos-readonly" : {
+        "description": "Read-only access for BlueSeaOS management dashboard",
+        "read": {
+            "ubus": {
+                "system": ["board", "info"],
+                "network.interface": ["dump", "status"],
+                "network.device": "status"
+            }
+        }
+    }
+}
