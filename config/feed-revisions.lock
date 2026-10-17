@@ -1,0 +1,9 @@
+# BlueSeaOS feed revision lock
+# Generated from the initialized OpenWrt checkout.
+# Feed name followed by its exact Git commit.
+
+luci 128a7812f4be233c5dd7f7466f534fd888785caf
+packages 5caa62e0bc9f7fb9b0c12a23267bceb7724214dd
+routing 3d7d0dc7fa43d3eb09498417407e95a6552e5312
+telephony 2618106d5846a4a542fdf5809f0d3ed228ce439b
+video 094bf58da6682f895255a35a84349a79dab4bf95
